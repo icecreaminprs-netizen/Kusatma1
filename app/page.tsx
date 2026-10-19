@@ -89,7 +89,7 @@ export default function Home() {
     setBossCleared(v => v.includes(floor) ? v : [...v, floor]);
     setStamina(v => Math.max(0, v - 15));
     setMessage(`${encounter} geçildi! Merdiven yolu açıldı.`);
-    if (floor === 40) { setStatus("won"); setMessage("Tebrikler! 40 katlı kuleyi tamamladınız. Gizli dolapta 41. kata geçiş var."); }
+    if (floor === 40) { setCloset(true); setMessage("Son Muhafız geçildi! Gizli dolap açıldı; 41. kata ışınlanabilirsin."); }
   };
 
   return <main className={`page ${night ? "night" : "dawn"}`}>
